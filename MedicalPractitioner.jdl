@@ -1,0 +1,36 @@
+entity MedicalPractitioner{
+	practitionerType String, //Nurse, Doctor, Ayurveda
+	specialty String, //Neurologist, Pulmonologist
+	registrationNumber String, 
+	employmentMode String, //<Gov, Private, Both>
+	qualification String,
+	status String, 
+	personIdRef Long
+}
+
+entity SourceDataIdentity{
+   serviceProviderName String,   // service name  
+   entityName String,        //table name
+   sourceRecordId String, //table record id  
+   dataCapturedElements String, //array type
+   
+}
+
+entity Document{
+  idType String, //(Passport, Aadhar, DL, Employment, Student)
+  idNumber String,
+  status String
+}
+
+relationship OneToMany { 
+  MedicalPractitioner to Document
+}
+relationship OneToOne { 
+   MedicalPractitioner to SourceDataIdentity
+}
+
+// Set pagination options
+paginate all with pagination
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+service all with serviceImpl

@@ -1,0 +1,39 @@
+{
+  "name": "Document",
+  "fields": [
+    {
+      "fieldName": "idType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "medicalPractitioner",
+      "otherEntityRelationshipName": "document",
+      "relationshipName": "medicalPractitioner",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200818154611",
+  "entityTableName": "document",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "medicalpractitioner",
+  "applications": "*",
+  "microserviceName": "medicalpractitioner",
+  "enableEntityAudit": true
+}

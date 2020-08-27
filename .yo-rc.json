@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.gok"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "microservice",
+    "baseName": "medicalpractitioner",
+    "packageName": "com.gok",
+    "packageFolder": "com/gok",
+    "serverPort": "8023",
+    "authenticationType": "oauth2",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YmU1ZDdlZTU3MWI5OTI4MDBlOGNiMTY3YTdjMTEyYTlmMmFhNDE1MGE2Y2QyNGIyMDBiNzg5NDljNGRiZDA0YjdkN2MxNjEwM2M5ODZlZmM4OWI5YzVjOGRiNWE2MDA1MjRhN2Y4NjAwMjMyNzIxZTI1NDM3ODM4MTgxZmY0NDA=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1597765173059,
+    "testFrameworks": ["cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "generator-jhipster-entity-audit": {
+    "auditFramework": "custom",
+    "auditPage": true,
+    "lastLiquibaseTimestamp": 1597765522000
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "MedicalPractitioner",
+  "fields": [
+    {
+      "fieldName": "practitionerType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "specialty",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registrationNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employmentMode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "qualification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "personIdRef",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "sourceDataIdentity",
+      "otherEntityRelationshipName": "medicalPractitioner",
+      "relationshipName": "sourceDataIdentity",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "medicalPractitioner",
+      "relationshipName": "document"
+    }
+  ],
+  "changelogDate": "20200818154411",
+  "entityTableName": "medical_practitioner",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "medicalpractitioner",
+  "applications": "*",
+  "microserviceName": "medicalpractitioner",
+  "enableEntityAudit": true
+}

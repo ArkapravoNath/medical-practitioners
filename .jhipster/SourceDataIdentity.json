@@ -1,0 +1,43 @@
+{
+  "name": "SourceDataIdentity",
+  "fields": [
+    {
+      "fieldName": "serviceProviderName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entityName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sourceRecordId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataCapturedElements",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "medicalPractitioner",
+      "otherEntityRelationshipName": "sourceDataIdentity",
+      "relationshipName": "medicalPractitioner",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200818154511",
+  "entityTableName": "source_data_identity",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "medicalpractitioner",
+  "applications": "*",
+  "microserviceName": "medicalpractitioner",
+  "enableEntityAudit": true
+}
